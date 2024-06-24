@@ -1,0 +1,100 @@
+Sat Apr  6 00:09:14 CST 2024
+m255
+K4
+z2
+!s11f vlog 2021.1_1 2021.02, Feb 21 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v2
+vccs_in_v1
+!s110 1712333349
+!i10b 1
+!s100 hG`MIfkW`6eYFCOA6<`Nd0
+I=8W;h1:;8>;e^Zhl3`CUn0
+R0
+Z1 w1707900582
+8/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+F/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+!i122 3
+L0 19 13
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.1_1;73
+r1
+!s85 0
+31
+!s108 1712333349.000000
+!s107 /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v|
+!s90 -work|mgc_hls|/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_v1.v|
+!i113 0
+Z4 o-work mgc_hls -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+vccs_in_wait_v1
+Z6 !s110 1712333348
+!i10b 1
+!s100 UD6R7L<g<Z8Am8oa<j7D11
+I0[VEg4OCIOBIFkK;ddzdP1
+R0
+R1
+8/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+F/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v
+!i122 0
+Z7 L0 19 25
+R2
+R3
+r1
+!s85 0
+31
+Z8 !s108 1712333348.000000
+!s107 /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v|
+!s90 -work|mgc_hls|/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_in_wait_v1.v|
+!i113 0
+R4
+R5
+vccs_out_wait_v1
+R6
+!i10b 1
+!s100 Y^GcQC:jSMkonZSGWNK3f1
+Iik=nPZPV1KNDBN5oKMBkS3
+R0
+Z9 w1707931196
+8/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+F/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v
+!i122 1
+R7
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v|
+!s90 -work|mgc_hls|/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/ccs_out_wait_v1.v|
+!i113 0
+R4
+R5
+vmgc_io_sync_v2
+R6
+!i10b 1
+!s100 SSz9[3G7Q`:fz<Q_HG35I1
+ID2Ua4WHBAimYIlNSGJ5oX1
+R0
+R9
+8/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+F/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+!i122 2
+L0 19 11
+R2
+R3
+r1
+!s85 0
+31
+R8
+!s107 /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v|
+!s90 -work|mgc_hls|/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v|
+!i113 0
+R4
+R5

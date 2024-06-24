@@ -1,0 +1,197 @@
+//  Catapult Ultra Synthesis 2024.1/1091966 (Production Release) Wed Feb 14 09:07:18 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED//  Catapult Ultra Synthesis 2024.1/1091966 (Production Release) Wed Feb 14 09:07:18 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux m112061621@ws24:57253 3.10.0-1160.95.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.1_0.0, HLS_PKGS v27.1_0.0, 
+//                       SIF_TOOLKITS v27.1_0.0, SIF_XILINX v27.1_0.0, 
+//                       SIF_ALTERA v27.1_0.0, CCS_LIBS v27.1_0.0, 
+//                       CDS_PPRO v2023.2_3, CDS_DesignChecker v2024.1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.2_0.16, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.1/1090934
+//  
+//  Start time Fri Apr  5 23:37:22 2024
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log57253842c6b45.0"
+solution file add ./01_walkthrough_loops/fir_tb.cpp -exclude true
+# /INPUTFILES/1
+solution file add ./01_walkthrough_loops/fir.h
+# /INPUTFILES/2
+go compile
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Creating project directory '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult_1/'. (PRJ-1)
+# Moving session transcript to file "/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/catapult.log"
+# Front End called with arguments: -- /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/fir.h (CIN-69)
+# Edison Design Group C++/C Front End - Version 6.3 (CIN-1)
+# Source file analysis completed (CIN-68)
+# Info: Completed transformation 'analyze' on solution 'solution.v1': elapsed time 1.72 seconds, memory usage 1483564kB, peak memory usage 1483564kB (SOL-9)
+# Info: Starting transformation 'compile' on solution 'fir.v1' (SOL-8)
+# Generating synthesis internal form... (CIN-3)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(8): Found top design routine 'fir' specified by directive (CIN-52)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(13): Inlining member function 'fir::fir' on object '' (CIN-64)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(19): Synthesizing method 'fir::run' (CIN-13)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(19): Inlining member function 'fir::run' on object '' (CIN-64)
+# $MGC_HOME/shared/include/ac_int.h(2953): Inlining routine 'operator>><19, true>' (CIN-14)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(19): Optimizing block '/fir' ... (CIN-4)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(19): INOUT port 'input' is only used as an input. (OPT-10)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(20): INOUT port 'coeffs' is only used as an input. (OPT-10)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(21): INOUT port 'output' is only used as an output. (OPT-11)
+# Info: $PROJECT_HOME/01_walkthrough_loops/fir.h(13): Partition '/fir/constructor' is found empty and is optimized away. (OPT-12)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(24): Loop '/fir/run/SHIFT' iterated at most 8 times. (LOOP-2)
+# $PROJECT_HOME/01_walkthrough_loops/fir.h(31): Loop '/fir/run/MAC' iterated at most 8 times. (LOOP-2)
+# Design 'fir' was read (SOL-1)
+# Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: CDesignChecker Shell script written to '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult_1/fir.v1/CDesignChecker/design_checker.sh'
+# Info: Completed transformation 'compile' on solution 'fir.v1': elapsed time 1.38 seconds, memory usage 1483564kB, peak memory usage 1483564kB (SOL-9)
+# Info: Design complexity at end of 'compile': Total ops = 28, Real ops = 5, Vars = 8 (SOL-21)
+solution library add nangate-45nm_beh -- -rtlsyntool DesignCompiler -vendor Nangate -technology 045nm
+flow run /SCVerify/launch_make ./scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim
+# Making './scverify/Verify_orig_cxx_osci.mk {} SIMTOOL=osci sim'
+# Make utility invoked from '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult_1/fir.v1'
+#     /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci build < "/dev/null" (BASIC-15)
+# make: Warning: File `ccs_env.mk' has modification time 0.53 s in the future
+# ============================================
+# Creating simulation directory 'scverify/orig_cxx_osci'
+# mkdir -p scverify/orig_cxx_osci
+# ============================================
+# Compiling C++ file: ../../01_walkthrough_loops/fir_tb.cpp
+# /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/g++ -DCCS_SCVERIFY_USE_CCS_BLOCK -DCCS_DUT_SYSC  -DSC_INCLUDE_DYNAMIC_PROCESSES -DSC_USE_STD_STRING -DCCS_MISMATCHED_OUTPUTS_ONLY -DDEADLOCK_DETECTION -std=gnu++11 -Wall -Wno-unknown-pragmas -Wno-unused-label -g -I. -I../.. -I. -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/src -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/siflibs -I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/hls_pkgs/mgc_comps_src -DSC_USE_STD_STRING  -c ../../01_walkthrough_loops/fir_tb.cpp -o scverify/orig_cxx_osci/fir_tb.cpp.cxxts.o
+# ============================================
+# Linking executable
+# /usr/cadtool/mentor/Catapult/2023.1/Mgc_home/bin/g++  -static-libstdc++ -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib -L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 scverify/orig_cxx_osci/fir_tb.cpp.cxxts.o -Wl,-Bstatic -lsystemc -Wl,-Bdynamic -lpthread -o scverify/orig_cxx_osci/scverify_top
+# make: warning:  Clock skew detected.  Your build may be incomplete.
+#     /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/make -f ./scverify/Verify_orig_cxx_osci.mk SIMTOOL=osci sim (BASIC-14)
+# Warning: make: Warning: File `scverify/orig_cxx_osci/scverify_top' has modification time 0.56 s in the future
+# ============================================
+# Simulating design
+# cd ../..; ./Catapult_1/fir.v1/scverify/orig_cxx_osci/scverify_top 
+# pass @   0:    1 ==    1 
+# pass @   1:   -4 ==   -4 
+# pass @   2:    2 ==    2 
+# pass @   3:    1 ==    1 
+# pass @   4:    0 ==    0 
+# pass @   5:   -6 ==   -6 
+# pass @   6:    7 ==    7 
+# pass @   7:   -3 ==   -3 
+# pass @   8:   -2 ==   -2 
+# pass @   9:    5 ==    5 
+# pass @  10:    7 ==    7 
+# pass @  11:    6 ==    6 
+# pass @  12:    5 ==    5 
+# pass @  13:   -1 ==   -1 
+# pass @  14:    4 ==    4 
+# pass @  15:   -5 ==   -5 
+# pass @  16:   13 ==   13 
+# pass @  17:  -15 ==  -15 
+# pass @  18:   12 ==   12 
+# pass @  19:   -4 ==   -4 
+# pass @  20:    4 ==    4 
+# pass @  21:    3 ==    3 
+# pass @  22:    1 ==    1 
+# pass @  23:   -2 ==   -2 
+# pass @  24:    0 ==    0 
+# pass @  25:  -10 ==  -10 
+# pass @  26:   -1 ==   -1 
+# pass @  27:   -5 ==   -5 
+# pass @  28:    6 ==    6 
+# pass @  29:    1 ==    1 
+# pass @  30:   -2 ==   -2 
+# pass @  31:   -6 ==   -6 
+# pass @  32:    3 ==    3 
+# pass @  33:  -14 ==  -14 
+# pass @  34:    3 ==    3 
+# pass @  35:   -3 ==   -3 
+# pass @  36:   -5 ==   -5 
+# pass @  37:   -3 ==   -3 
+# pass @  38:    6 ==    6 
+# pass @  39:  -13 ==  -13 
+# pass @  40:   -3 ==   -3 
+# pass @  41:   -9 ==   -9 
+# pass @  42:    2 ==    2 
+# pass @  43:   -8 ==   -8 
+# pass @  44:   11 ==   11 
+# pass @  45:   -4 ==   -4 
+# pass @  46:    6 ==    6 
+# pass @  47:    3 ==    3 
+# pass @  48:    2 ==    2 
+# pass @  49:    0 ==    0 
+# pass @  50:    9 ==    9 
+# pass @  51:    0 ==    0 
+# pass @  52:   -2 ==   -2 
+# pass @  53:   -9 ==   -9 
+# pass @  54:   -5 ==   -5 
+# pass @  55:   -1 ==   -1 
+# pass @  56:   -2 ==   -2 
+# pass @  57:   -6 ==   -6 
+# pass @  58:   -3 ==   -3 
+# pass @  59:   -2 ==   -2 
+# pass @  60:   -4 ==   -4 
+# pass @  61:   -3 ==   -3 
+# pass @  62:   11 ==   11 
+# pass @  63:   -5 ==   -5 
+# pass @  64:    8 ==    8 
+# pass @  65:  -12 ==  -12 
+# pass @  66:    3 ==    3 
+# pass @  67:    3 ==    3 
+# pass @  68:    2 ==    2 
+# pass @  69:    8 ==    8 
+# pass @  70:   -6 ==   -6 
+# pass @  71:   -4 ==   -4 
+# pass @  72:   -8 ==   -8 
+# pass @  73:    5 ==    5 
+# pass @  74:    2 ==    2 
+# pass @  75:    1 ==    1 
+# pass @  76:    3 ==    3 
+# pass @  77:    5 ==    5 
+# pass @  78:   -2 ==   -2 
+# pass @  79:   -3 ==   -3 
+# pass @  80:   -6 ==   -6 
+# pass @  81:    1 ==    1 
+# pass @  82:   -1 ==   -1 
+# pass @  83:   -5 ==   -5 
+# pass @  84:   11 ==   11 
+# pass @  85:   -7 ==   -7 
+# pass @  86:    7 ==    7 
+# pass @  87:   -5 ==   -5 
+# pass @  88:   -1 ==   -1 
+# pass @  89:    3 ==    3 
+# pass @  90:  -18 ==  -18 
+# pass @  91:   21 ==   21 
+# pass @  92:  -12 ==  -12 
+# pass @  93:    2 ==    2 
+# pass @  94:   -6 ==   -6 
+# pass @  95:    5 ==    5 
+# pass @  96:  -21 ==  -21 
+# pass @  97:   18 ==   18 
+# pass @  98:   -5 ==   -5 
+# pass @  99:    9 ==    9 
+# 
+# total pass count 100
+# total fail count 0
+# make: warning:  Clock skew detected.  Your build may be incomplete.
+flow package require /VSCode
+# 10.6a
+flow run /VSCode
+# Info: Wrote VSCode configuration file: '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/.vscode/c_cpp_properties.json'
+# Info: Wrote VSCode configuration file: '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/.vscode/tasks.json'
+# Info: Wrote VSCode configuration file: '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/.vscode/launch.json'
+# Info: Wrote VSCode configuration file: '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult.code-workspace'
+# /OUTPUTFILES/4/DEPENDENCIES/1/DEPENDENCIES/1
+flow run /VSCode/launch_vscode ../../Catapult.code-workspace
+# Error: VSCode install '/wv/hlstools/vscode/LATEST' not found
+flow run /VSCode/launch_vscode ../../Catapult.code-workspace
+# Error: VSCode install '/wv/hlstools/vscode/LATEST' not found
+flow package option set /VSCode/INSTALL /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops
+# /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops
+quit
+# Error: cannot open input file '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult_1/SIF/.sif/UNOB_HPART_sid1_compile_4a12cbfc-d7a7-4706-9972-c8e76dfc2bb6.xml' (BASIC-3)
+# Error: Failed to open XML file '/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult_1/SIF/.sif/UNOB_HPART_sid1_compile_4a12cbfc-d7a7-4706-9972-c8e76dfc2bb6.xml' (BASIC-34)
+# Error: internal assertion failed (!output.fail()) /wv/hlsb/CATAPULT/2024.1/2024-02-14/src/classes/sif_reloadable.cxx line 356 (ASSERT-1)
+// Finish time Fri Apr  5 23:48:08 2024, time elapsed 10:46, peak memory 1.41GB, exit status 0

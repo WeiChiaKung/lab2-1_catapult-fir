@@ -1,0 +1,65 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "g++ build",
+			"command": "/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/g++",
+			"args": [
+				"-g",
+				"-std=c++11",
+				"-DSC_INCLUDE_DYNAMIC_PROCESSES",
+				"-Wl,-rpath=/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/lib,-rpath=/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib",
+				"./01_walkthrough_loops/fir_tb.cpp",
+				"-I/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir",
+				"-I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include",
+				"-L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib",
+				"-Wl,-Bstatic",
+	{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "g++ build",
+			"command": "/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/bin/g++",
+			"args": [
+				"-g",
+				"-std=c++11",
+				"-DSC_INCLUDE_DYNAMIC_PROCESSES",
+				"-Wl,-rpath=/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/lib,-rpath=/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib",
+				"./01_walkthrough_loops/fir_tb.cpp",
+				"-I/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir",
+				"-I/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/include",
+				"-L/usr/cadtool/mentor/Catapult/2024.1/Mgc_home/shared/lib",
+				"-Wl,-Bstatic",
+				"-lsystemc",
+				"-Wl,-Bdynamic",
+				"-lpthread",
+				"-o",
+				"/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/fir"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "run",
+			"command": "/home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/fir ",
+			"dependsOn": [
+				"g++ build"
+			],
+			"problemMatcher": []
+		},
+		{
+			"type": "shell",
+			"label": "trace",
+			"command": "gtkwave trace.vcd",
+			"dependsOn": [
+				"run"
+			],
+			"problemMatcher": []
+		}
+	]
+}

@@ -1,0 +1,110 @@
+[0 sec] RunProgram: {
+id                       = 
+absorb_qor_file          = 1
+absorb_resource_stats    = 0
+absorb_runtime           = 0
+program_name             = /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info
+args                     = {60723, .stack_trace.log, 600}
+background               = 1
+cache_input_filenames    = {}
+cache_output_filenames   = {}
+platform                 = 64
+pwd                      = 
+qorfile                  = 
+stderr                   = /dev/null
+stdout                   = /dev/null
+tclscript                = 
+timeout                  = infinite
+memlimit                 = 0
+transfer_globals         = 0
+transfer_globals_filename= 
+workdir                  = 
+name                     = 
+after                    = {}
+before                   = {}
+death_signal             = 15}
+
+[0 sec] Spawn: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info in /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto
+[0 sec] Spawn: pid=60768 for /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info
+[0 sec] RunProgram: background job detached
+[9 sec] RunProgram: {
+id                       = 
+absorb_qor_file          = 1
+absorb_resource_stats    = 0
+absorb_runtime           = 1
+program_name             = /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc
+args                     = {-c, %read /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto/testsolverA.v; %blast; &put; write_aiger -u /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto/testsolverA.aig}
+background               = 0
+cache_input_filenames    = {}
+cache_output_filenames   = {}
+platform                 = 64
+pwd                      = 
+qorfile                  = 
+stderr                   = testsolverA.err
+stdout                   = testsolverA.out
+tclscript                = 
+timeout                  = infinite
+memlimit                 = 0
+transfer_globals         = 0
+transfer_globals_filename= 
+workdir                  = 
+name                     = 
+af[0 sec] RunProgram: {
+id                       = 
+absorb_qor_file          = 1
+absorb_resource_stats    = 0
+absorb_runtime           = 0
+program_name             = /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info
+args                     = {60723, .stack_trace.log, 600}
+background               = 1
+cache_input_filenames    = {}
+cache_output_filenames   = {}
+platform                 = 64
+pwd                      = 
+qorfile                  = 
+stderr                   = /dev/null
+stdout                   = /dev/null
+tclscript                = 
+timeout                  = infinite
+memlimit                 = 0
+transfer_globals         = 0
+transfer_globals_filename= 
+workdir                  = 
+name                     = 
+after                    = {}
+before                   = {}
+death_signal             = 15}
+
+[0 sec] Spawn: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info in /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto
+[0 sec] Spawn: pid=60768 for /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/common/prof/proc_info
+[0 sec] RunProgram: background job detached
+[9 sec] RunProgram: {
+id                       = 
+absorb_qor_file          = 1
+absorb_resource_stats    = 0
+absorb_runtime           = 1
+program_name             = /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc
+args                     = {-c, %read /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto/testsolverA.v; %blast; &put; write_aiger -u /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto/testsolverA.aig}
+background               = 0
+cache_input_filenames    = {}
+cache_output_filenames   = {}
+platform                 = 64
+pwd                      = 
+qorfile                  = 
+stderr                   = testsolverA.err
+stdout                   = testsolverA.out
+tclscript                = 
+timeout                  = infinite
+memlimit                 = 0
+transfer_globals         = 0
+transfer_globals_filename= 
+workdir                  = 
+name                     = 
+after                    = {}
+before                   = {}
+death_signal             = 15}
+
+[9 sec] Spawn: /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc in /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/01_walkthrough_loops/Catapult/fir.v1/CDesignChecker/calypto
+[9 sec] Spawn: pid=60834 for /usr/cadtool/mentor/Catapult/2024.1/Mgc_home/pkgs/cds_cpc/rls/platform/linux64/bin/abc
+[9 sec] RunProgram: ErrorCode=(0,0)
+[9 sec] AbsorbRuntime: from rusage, 0.031088u 0.019054s

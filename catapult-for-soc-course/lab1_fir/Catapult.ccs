@@ -1,0 +1,36 @@
+//  Catapult Ultra Synthesis 2024.1/1091966 (Production Release) Wed Feb 14 09:07:18 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux m112061621@ws24:56408 3.10.0-1160.95.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.1_0.0, HLS_PKGS v27.1_0.0, 
+//                       SIF_TOOLKITS v27.1_0.0, SIF_XILINX v27.1_0.0, 
+//                       SIF_ALTERA v27.1_0.0, CCS_LIBS v27.1_0.0, 
+//                       C//  Catapult Ultra Synthesis 2024.1/1091966 (Production Release) Wed Feb 14 09:07:18 PST 2024
+//  
+//          Copyright (c) Siemens EDA, 1996-2024, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                   PROPERTY OF SIEMENS EDA OR ITS LICENSORS.
+//  
+//  Running on Linux m112061621@ws24:56408 3.10.0-1160.95.1.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v27.1_0.0, HLS_PKGS v27.1_0.0, 
+//                       SIF_TOOLKITS v27.1_0.0, SIF_XILINX v27.1_0.0, 
+//                       SIF_ALTERA v27.1_0.0, CCS_LIBS v27.1_0.0, 
+//                       CDS_PPRO v2023.2_3, CDS_DesignChecker v2024.1, 
+//                       CDS_OASYS v21.1_3.1, CDS_PSR v23.2_0.16, 
+//                       DesignPad v2.78_1.0, DesignAnalyzer 2024.1/1090934
+//  
+if {[info script] != {} && [file isdirectory [file rootname [info script]]]} {
+  project load [file rootname [info script]] 2024.1
+} elseif { [file isdirectory /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult] } {
+  project load /home/m112/m112061621/soc_lab2-1/catapult-for-soc-course/lab1_fir/Catapult 2024.1
+} else {
+  error {unable to locate project directory 'Catapult'}
+}
+
